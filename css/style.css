@@ -43,6 +43,11 @@ img {
   max-width: 120rem;
   margin: 5rem auto;
   width: 95%;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* dashboard */
@@ -97,32 +102,62 @@ img {
   padding: 1rem 2rem;
 }
 
-.dashboard__calendar p {
+.dashboard__calendar a {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--Desaturated-blue);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 /* plans */
+
+.plans {
+  display: grid;
+  gap: 2rem;
+}
 
 .plan {
   border-radius: 2rem;
   padding: 1rem;
   position: relative;
+  margin: 5rem 0;
 }
 
 .plan__color {
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 24rem;
   border-radius: 2rem 2rem 0 0;
   height: 5rem;
 }
 
-.plan__color:nth-child(1) {
+/* child */
+
+.work {
   background-color: var(--Light-red-work);
   background-image: url(/images/icon-work.svg);
 }
+.play {
+  background-color: var(--Soft-blue-play);
+  background-image: url(/images/icon-play.svg);
+}
+.study {
+  background-color: var(--Light-red-study);
+  background-image: url(/images/icon-study.svg);
+}
+.exercise {
+  background-color: var(--Lime-green-exercise);
+  background-image: url(/images/icon-exercise.svg);
+}
+.social {
+  background-color: var(--Violet-social);
+  background-image: url(/images/icon-social.svg);
+}
+.self-care {
+  background-color: var(--Soft-orange-self-care);
+  background-image: url(/images/icon-self-care.svg);
+}
+
+/* plan content */
 
 .plan__content {
   position: absolute;
@@ -133,7 +168,7 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  padding: 2rem;
+  padding: 1.5rem;
   color: #fff;
 }
 
@@ -161,4 +196,90 @@ img {
 .duration {
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .user {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+  }
+
+  .user img {
+    margin: 2rem 0 0 0;
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .user__data {
+    margin: 0 0 2rem 0;
+  }
+
+  .user__heading {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 300;
+  }
+
+  .dashboard__calendar {
+    padding: 1rem 3rem;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  /* plans */
+
+  .plan__content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    width: 94%;
+  }
+
+  .plans {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .plan {
+    margin-top: 4rem;
+  }
+
+  .duration {
+    margin: 0;
+  }
+
+  .content__title {
+    font-size: 1.2rem;
+  }
+
+  .content__duration {
+    position: relative;
+  }
+
+  .content__duration img {
+    margin: 0;
+    position: absolute;
+    top: -6rem;
+    left: 17rem;
+  }
+
+  .plan__color {
+    background-position: 13rem center;
+    width: 25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .plans {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
