@@ -1,0 +1,164 @@
+:root {
+  /* primary */
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* neutral */
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+
+  /* font */
+
+  --fuente-principal: "Rubik", serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.8rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  background-color: var(--Very-dark-blue);
+  color: var(--Pale-Blue);
+}
+img {
+  max-width: 100%;
+}
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 5rem auto;
+  width: 95%;
+}
+
+/* dashboard */
+
+.dashboard {
+  display: grid;
+}
+
+.dashboard__user {
+  background-color: var(--Dark-blue);
+  border-radius: 2rem;
+}
+
+/* user */
+
+.user {
+  background-color: var(--Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+
+.user img {
+  width: 6rem;
+  height: 6rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.user__data {
+  margin: 2rem 0;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.user__heading {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* calendar */
+
+.dashboard__calendar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.dashboard__calendar p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+  margin-bottom: 0.5rem;
+}
+
+/* plans */
+
+.plan {
+  border-radius: 2rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.plan__color {
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 2rem 2rem 0 0;
+  height: 5rem;
+}
+
+.plan__color:nth-child(1) {
+  background-color: var(--Light-red-work);
+  background-image: url(/images/icon-work.svg);
+}
+
+.plan__content {
+  position: absolute;
+  background-color: var(--Dark-blue);
+  border-radius: 2rem;
+  top: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 2rem;
+  color: #fff;
+}
+
+.content__title {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.content__time {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.content__duration {
+  color: var(--Pale-Blue);
+  align-items: right;
+  text-align: right;
+}
+
+.content__duration img {
+  margin-top: 3rem;
+}
+
+.duration {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
