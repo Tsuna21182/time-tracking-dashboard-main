@@ -107,6 +107,7 @@ a {
   font-weight: 500;
   color: var(--Desaturated-blue);
   margin-bottom: 0;
+  transition: 0.2s ease-in-out;
 }
 
 /* plans */
@@ -170,6 +171,7 @@ a {
   width: 95%;
   padding: 1.5rem;
   color: #fff;
+  transition: 0.2s ease-in-out;
 }
 
 .content__title {
@@ -191,6 +193,7 @@ a {
 
 .content__duration img {
   margin-top: 3rem;
+  transition: 0.2s ease-in-out;
 }
 
 .duration {
@@ -279,7 +282,48 @@ a {
 }
 
 @media (min-width: 1440px) {
+  .dashboard__user {
+    width: 55%;
+    margin-right: 2rem;
+  }
+
+  .dashboard__calendar {
+    margin-bottom: 1rem;
+  }
+
+  .plan {
+    margin: 0;
+  }
+
   .plans {
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5rem;
   }
+
+  .content__title {
+    font-size: 1.5rem;
+  }
+
+  .content__time {
+    font-weight: 500;
+  }
+
+  .duration {
+    margin-bottom: 2rem;
+  }
+}
+
+/* effect */
+
+.plan__content:hover {
+  background-color: var(--Desaturated-blue);
+}
+
+.dashboard__calendar a:hover {
+  font-weight: 700;
+  color: #fff;
+}
+.content__duration img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
